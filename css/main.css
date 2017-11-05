@@ -1,0 +1,378 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+ @font-face {
+    font-family: 'julesbubbleuclcregular';
+    src: url('fonts/julesbubbleuclc-webfont.eot');
+    src: url('fonts/julesbubbleuclc-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/julesbubbleuclc-webfont.woff2') format('woff2'),
+         url('fonts/julesbubbleuclc-webfont.woff') format('woff'),
+         url('fonts/julesbubbleuclc-webfont.svg#julesbubbleuclcregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+ }
+
+ @font-face {
+    font-family: 'julescapsblockregular';
+    src: url('fonts/julescapsblock-webfont.eot');
+    src: url('fonts/julescapsblock-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/julescapsblock-webfont.woff2') format('woff2'),
+         url('fonts/julescapsblock-webfont.woff') format('woff'),
+         url('fonts/julescapsblock-webfont.svg#julescapsblockregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+ }
+
+ @font-face {
+    font-family: 'julesstickallregular';
+    src: url('fonts/julesstickall-webfont.eot');
+    src: url('fonts/julesstickall-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/julesstickall-webfont.woff2') format('woff2'),
+         url('fonts/julesstickall-webfont.woff') format('woff'),
+         url('fonts/julesstickall-webfont.svg#julesstickallregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+ }
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html {
+
+}
+
+*, body {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+  margin: 0;
+}
+
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+   .flex-container {
+     display: -webkit-flex;
+     display: flex;
+     -webkit-flex-flow: row wrap;
+     flex-flow: row wrap;
+     text-align: center;
+   }
+   .flex-container > * {
+     padding: 15px;
+     -webkit-flex: 1 100%;
+     flex: 1 100%;
+   }
+
+   .article {
+     text-align: left;
+   }
+   .object-fit-contain{
+     max-height: 200px;
+     width: 100%;
+     object-fit: contain;
+   }
+   * {
+     line-height: 1.2;
+     margin: 0;
+   }
+
+   html {
+     color: #000000;
+     display: table;
+     font-family: 'julesstickallregular';
+     height: 100%;
+     text-align: center;
+     width: 100%;
+   }
+
+   header {
+     display: flex;
+     flex-direction: row;
+     vertical-align: middle;
+     color: black;
+   }
+   header img {
+     display: inline-block;
+   }
+   footer {
+          color: black;
+   }
+   ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+   }
+
+   li {
+     display: inline-block;
+     background-color: white;
+     padding: 20px;
+   }
+
+   li a, .dropbtn {
+     display: inline-block;
+     font-size: 2.5em;
+     color: black;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+   }
+
+   /* Change the link color to #111 (black) on hover */
+   li a:hover, .dropbtn:hover .dropbtn {
+     background-color: #f1f1f1;
+   }
+
+   li.dropdown {
+     display: inline-block;
+   }
+
+   .dropdown-content {
+     display: none;
+     position: absolute;
+     background-color: #f9f9f9;
+     color: black;
+     min-width: 160px;
+     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+     z-index: 1;
+   }
+
+   .dropdown-content a:hover {
+     background-color: #f1f1f1;
+     color: black;
+   }
+
+   .dropdown:hover .dropdown-content {
+     display: block;
+   }
+
+   body {
+     background-image: url("../images/1440px_720px_grid.png");
+     display: table-cell;
+     vertical-align: top;
+     margin: 0;
+   }
+
+   h1 {
+     margin: 0;
+     padding-left: 0;
+     color: #000000;
+     font-family: 'julescapsblockregular';
+     font-size: 90px;
+     font-weight: 450;
+     text-align: center;
+     width: 100%;
+
+   }
+   aside {
+    display: inline-table;
+    width:200px;
+    margin-left: 10px;
+    vertical-align: middle;
+   }
+   main {
+     display: inline-table;
+     width:1000px;
+     text-align: center;
+     margin: 0;
+     vertical-align: middle;
+   }
+
+   p {
+     color: #000000;
+     font-family: 'julesstickallregular';
+     font-size: 30px;
+     margin: 0 auto;
+     width: 800px;
+   }
+
+   @media only screen and (max-width: 300px) {
+
+       header h1 {
+         font-size: 1.5em;
+         margin: 0 0 0.3em;
+       }
+
+   }
+   @media only screen and (max-width: 600px) {
+
+       header h1 {
+         font-size: 3.5em;
+         margin: 0 0 0.3em;
+       }
+
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
